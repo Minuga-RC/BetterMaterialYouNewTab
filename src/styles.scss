@@ -1,101 +1,165 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');*/
-/* @import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,100..700,0..1');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap");
+//@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+/* fallback */
 @font-face {
-    font-family: 'poppins';
-    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/Material-symbols-outlined.woff2) format('woff2');
+  }
+  
+  .material-symbols-outlined {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+  }
+@font-face {
+	font-family: "poppins";
+	src: url(fonts/Poppins-Regular.ttf) format("truetype");
 }
-
-* {
-    box-sizing: border-box;  
+*:not([class^="md-icon"]) {
+	box-sizing: border-box;
+	font-family: var(--main-font-family);
 }
-
 :root {
-    font-family: 'poppins', 'Poppins', sans-serif;
-    /* 🔵🔵🔵 */
-    /* ⚠️ Please don't change the color value for this one (if ? then you have to change all colorCode in JavaScript file too */
-    --bg-color-blue: #BBD6FD;
-    --accentLightTint-blue: #E2EEFF;
-    --darkerColor-blue: #3569b2;
-    --darkColor-blue: #4382EC;
-    --tonebtn-blue: #2c74f1cf;
-    --textColorDark-blue: #1b3041;
+	/* Default font */
+	--main-font-family: "poppins", "Poppins", sans-serif, "Material Symbols Outlined";
+	/* 🔵🔵🔵 */
+	/* ⚠️ Please don't change the color value or names for Blue (if ? modifying code would be difficult */
+	--bg-color-blue: #bbd6fd;
+	--accentLightTint-blue: #e2eeff;
+	--darkerColor-blue: #3569b2;
+	--darkColor-blue: #4382ec;
+	--textColorDark-blue: #1b3041;
+	--whitishColor-blue: #ffffff;
 
-    /* 🔴🔴🔴 */
-    --bg-color-red: #FDBDBD;
-    --accentLightTint-red: #ffe7e7;
-    --darkerColor-red: #B23535;
-    --darkColor-red: #EC4343;
-    --tonebtn-red: #f12c2cc4;
-    --textColorDark-red: #411B1B;
+	/* 🔴🔴🔴 */
+	--bg-color-red: #fdbdbd;
+	--accentLightTint-red: #ffe7e7;
+	--darkerColor-red: #b23535;
+	--darkColor-red: #ec4343;
+	--textColorDark-red: #411b1b;
+	--whitishColor-red: #ffffff;
 
-    /*Peela*/
-    --bg-color-yellow: #edea8c;
-    --accentLightTint-yellow: #fff2c2;
-    --darkerColor-yellow: #CCA243;
-    --darkColor-yellow: #f4d837;
-    --tonebtn-yellow: #f1e12cbc;
-    --textColorDark-yellow: #5B5428;
+	/* 🟡🟡🟡 */
+	--bg-color-yellow: #ffed80;
+	--accentLightTint-yellow: #fff6c3;
+	--darkerColor-yellow: #ae9502;
+	--darkColor-yellow: #d1a93d;
+	--textColorDark-yellow: #2f2707;
+	--whitishColor-yellow: #ffffff;
 
-    /* 🟢🟢🟢 */
-    --bg-color-green: #C7E4C7;
-    --accentLightTint-green: #E1F1E1;
-    --darkerColor-green: #458245;
-    --darkColor-green: #5CBA5C;
-    --tonebtn-green: #39e417b1;
-    --textColorDark-green: #1B411B;
+	/* 🟢🟢🟢 */
+	--bg-color-green: #c7e4c7;
+	--accentLightTint-green: #e1f1e1;
+	--darkerColor-green: #458245;
+	--darkColor-green: #5cba5c;
+	--textColorDark-green: #1b411b;
+	--whitishColor-green: #ffffff;
 
-    /* Cyan */
-    --bg-color-cyan: #9bffff;
+	/* Cyan */
+	/* --bg-color-cyan: #9bffff;
     --accentLightTint-cyan: #d5ffff;
     --darkerColor-cyan: #5E9CA0;
     --darkColor-cyan: #00CED1;
-    --tonebtn-cyan: #2cbcf1bf;
-    --textColorDark-cyan: #08354B;
+    --textColorDark-cyan: #08354B; */
 
-    /* 🩷💗🩷 */
-    --bg-color-pink: #F9C8D6;
-    --accentLightTint-pink: #FFEBF2;
-    --darkerColor-pink: #B24B64;
-    --darkColor-pink: #EC5E78;
-    --tonebtn-pink: #cd2cf1b6;
-    --textColorDark-pink: #411B28;
+	--bg-color-cyan: #9cefef;
+	--accentLightTint-cyan: #d5ffff;
+	--darkerColor-cyan: #07787f;
+	--darkColor-cyan: #09b2b4;
+	--textColorDark-cyan: #08354b;
+	--whitishColor-cyan: #ffffff;
 
-    /* 🟠🟠🟠 */
-    --bg-color-orange: #FFD8B2;
-    --accentLightTint-orange: #FFEDD5;
-    --darkerColor-orange: #B26D3E;
-    --darkColor-orange: #EC844D;
-    --tonebtn-orange: #f18f2ccf;
-    --textColorDark-orange: #412B1E;
+	/* 🩷💗🩷 */
+	--bg-color-pink: #f9c8d6;
+	--accentLightTint-pink: #ffebf2;
+	--darkerColor-pink: #b24b64;
+	--darkColor-pink: #ec5e78;
+	--textColorDark-pink: #411b28;
+	--whitishColor-pink: #ffffff;
 
-    /* 🟣🟣🟣 */
-    --bg-color-purple: #DAC2E8;
-    --accentLightTint-purple: #E9E2F3;
-    --darkerColor-purple: #724B8F;
-    --darkColor-purple: #9563B5;
-    --tonebtn-purple: #712cf1cf;
-    --textColorDark-purple: #2D1B3E;
+	/* 🟠🟠🟠 */
+	--bg-color-orange: #ffd8b2;
+	--accentLightTint-orange: #ffedd5;
+	--darkerColor-orange: #b26d3e;
+	--darkColor-orange: #ec844d;
+	--textColorDark-orange: #412b1e;
+	--whitishColor-orange: #ffffff;
 
-    /* Dark Kaala */
-    --bg-color-dark: #505050;
-    --accentLightTint-dark: #818181;
-    --darkerColor-dark: #010208;
-    --darkColor-dark: #434343;
-    --tonebtn-dark: #020813c3;
-    --textColorDark-dark: #010208;
-     /* Global variables */
-     --gap: 30px;
-     --round: 30px;
- 
-     /* Shortcut bar */
-     --max-shortcut-bar-width: 60vw;
-     --shortcut-bar-gap-and-padding: 10px;
-     --shortcut-size: 50px;
-     --always-show-dock-background: 0;
+	/* 🟣🟣🟣 */
+	--bg-color-purple: #dac2e8;
+	--accentLightTint-purple: #e9e2f3;
+	--darkerColor-purple: #724b8f;
+	--darkColor-purple: #9563b5;
+	--textColorDark-purple: #2d1b3e;
+	--whitishColor-purple: #ffffff;
 
-    --md-icon-font:'Material Symbols Rounded';
+	/* ⚪ Silver */
+	--bg-color-silver: #c6c6c6;
+	--accentLightTint-silver: #e5e5e5;
+	--darkerColor-silver: #6f6f6f;
+	--darkColor-silver: #9e9e9e;
+	--textColorDark-silver: #333333;
+	--whitishColor-silver: #ffffff;
+
+	/* 🟤🟤🟤 */
+	--bg-color-brown: #dfc28d;
+	--accentLightTint-brown: #eae3c9;
+	--darkerColor-brown: #4e3930;
+	--darkColor-brown: #705347;
+	--textColorDark-brown: #16100d;
+	--whitishColor-brown: #ffffff;
+
+	/* 🩶🩶🩶 Grey */
+	/* --bg-color-pink: #f9c8d6;
+	--accentLightTint-pink: #ffebf2;
+	--darkerColor-pink: #b24b64;
+	--darkColor-pink: #ec5e78;
+	--textColorDark-pink: #411b28;
+	--whitishColor-pink: #ffffff; */
+
+
+	--bg-color-grey: #ffccbf;
+	--accentLightTint-grey: #fdf1ef;
+	--darkerColor-grey: #f67455;
+	--darkColor-grey: #9c29ba;
+	--textColorDark-grey: #441730;
+	--whitishColor-grey: #ffffff;
+
+
+	/* ⚫⚫⚫ */
+	--bg-color-dark: #171615;
+	--accentLightTint-dark: #3c3c3c;
+	--darkerColor-dark: #eeeeee;
+	--darkColor-dark: #212121;
+	--textColorDark-dark: #d6d6d6;
+	--whitishColor-dark: #cccccc;
+
+	/* ----------------- */
+
+	/* Global variables */
+	--gap: 30px;
+	--round: 30px;
+
+	/* Shortcut bar */
+	--max-shortcut-bar-width: 60vw;
+	--shortcut-bar-gap-and-padding: 10px;
+	--shortcut-size: 50px;
+	--always-show-dock-background: 0;
+    
+    /* material web components */
+    --md-icon-font:'Material Symbols Outlined';
     --md-primary-tab-container-color:#ffffff00;
     --md-icon-size:32px;  
     --md-icon-button-icon-size: 32px;
@@ -113,11 +177,21 @@
     --md-sys-color-on-primary-container: var(--accentLightTint-blue);
     --md-filter-chip-outline-color: var(--accentLightTint-blue);
     --md-filter-chip-label-text-color:var(--textColorDark-blue);
+	--md-secondary-tab-label-text-color:var(--textColorDark-blue);
+	--md-primary-tab-label-text-color:var(--textColorDark-blue);
+	--md-secondary-tab-icon-color:var(--textColorDark-blue);
+	--md-filled-text-field-text-color:var(--textColorDark-blue);
+	--md-filled-text-field-input-text-color:var(--textColorDark-blue);
+	--md-filled-text-field-hover-lable-text-color:var(--textColorDark-blue);
+	--md-filled-text-field-hover-input-text-color:var(--textColorDark-blue);
+	--md-filled-text-field-foucs-lable-text-color:var(--textColorDark-blue);
+	--md-filled-text-field-focus-input-text-color:var(--textColorDark-blue);
+	--md-primary-tab-icon-color:var(--textColorDark-blue);
     --md-filled-tonal-button-label-text-font: 'poppins';
     --md-filled-button-label-text-font: 'poppins';
     --md-outlined-button-label-text-font: 'poppins';
     --md-text-button-label-text-font: 'poppins';
-    --md-sys-color-secondary-container: var(--tonebtn-blue);
+    --md-sys-color-secondary-container: var(--darkColor-blue);
     --md-sys-color-on-secondary-container: #ffffff;
     --md-filter-chip-label-text-font: 'poppins', serif;
     --md-primary-tab-label-text-font: 'poppins', serif;
@@ -125,450 +199,1316 @@
     --md-dialog-supporting-text-font: 'poppins', serif;
     --md-secondary-tab-container-color:var(--accentLightTint-blue);
     --md-elevated-button-label-text-font: 'poppins', serif;
-    --md-elevated-button-icon-color:var(--accentLightTint-blue);
-    --md-elevated-button-hover-icon-color:var(--accentLightTint-blue);
-    --md-elevated-button-focus-icon-color:var(--accentLightTint-blue);
-    --md-elevated-button-label-text-color:var(--accentLightTint-blue);
-    --md-elevated-button-hover-label-text-color:var(--accentLightTint-blue);
-    --md-elevated-button-focus-label-text-color:var(--accentLightTint-blue);
+    --md-elevated-button-icon-color:var(--textColorDark-blue);
+    --md-elevated-button-hover-icon-color:var(--textColorDark-blue);
+    --md-elevated-button-focus-icon-color:var(--textColorDark-blue);
+    --md-elevated-button-label-text-color:var(--textColorDark-blue);
+    --md-elevated-button-hover-label-text-color:var(--textColorDark-blue);
+    --md-elevated-button-focus-label-text-color:var(--textColorDark-blue);
     --md-elevated-button-container-color:var(--darkColor-blue);
-} 
-
-.resultBox {
-    max-height: 250px;
-    overflow-y: auto;
-   
-    position: absolute;
-    top: 1;
-    left: 0;
-    width: 100%;
-    border-radius: var(--round);
-
-    padding: 10px;
-    scrollbar-width: none; /* For Firefox */
-
-    /* Initially hidden */
-    opacity: 0;
-    z-index: -1000;
-    transform: translateY(-70px);
-    transition: opacity 0.5s ease, transform 0.5s ease, z-index 0.5s ease; 
-    pointer-events: none; 
+	--md-outlined-icon-button-icon-color:var(--textColorDark-blue);
+	--md-outlined-icon-button-hover-icon-color:var(--textColorDark-blue);
+	--md-outlined-icon-button-focus-icon-color:var(--textColorDark-blue);
+	--md-outlined-icon-button-pressed-icon-color:var(--textColorDark-blue);
+	--md-outlined-text-field-input-text-font: 'poppins', serif;
+    --md-outlined-text-field-lable-text-font: 'poppins', serif;
+    --md-outlined-text-field-supporting-text-font: 'poppins', serif;
+	--md-outlined-text-field-input-text-color: var(--textColorDark-blue);
+	--md-outlined-text-field-focus-lable-text-color: var(--textColorDark-blue);
+	--md-outlined-text-field-focus-input-text-color: var(--textColorDark-blue);
+    --md-outlined-text-field-lable-text-color: var(--textColorDark-blue);
+	--md-outlined-text-field-input-text-color: var(--textColorDark-blue);
+    --md-outlined-text-field-supporting-text-color: var(--textColorDark-blue);
+	--md-outlined-text-field-hover-supporting-text-color: var(--textColorDark-blue);
 }
 
-.resultBox::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Edge */
-}
-
-/* Visible state: when you want the result box to appear */
-.resultBox.show {
-    opacity: 1;
-    visibility: visible; 
-    transform: translateY(0); 
-    z-index: 1000;
-    pointer-events: all;
-}
-
-.resultItem {
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--textColorDark-blue);
-}
-
-.resultItem:hover {
-   background-color: var(--darkColor-blue);
-   border-radius: 15px;
-   color: #fff;
-}
 /* Theme */
 /* ⚫🟣🔵🔴🟡🟢🟠⚪ */
 
 .accentColor {
-    fill: var(--darkColor-blue);
+	fill: var(--darkColor-blue);
 }
 
 .bgLightTint {
-    fill: var(--accentLightTint-blue);
-    background-color: var(--accentLightTint-blue);
+	fill: var(--accentLightTint-blue);
+	background-color: var(--accentLightTint-blue);
+}
+
+.strokecolor {
+	stroke: var(--darkColor-blue);
 }
 
 .lessDark {
-    background-color: var(--bg-color-blue);
-    fill: var(--bg-color-blue);
+	background-color: var(--bg-color-blue);
+	fill: var(--bg-color-blue);
 }
 
 /* ⚫🟣🟡🔵🔴🟠⚪🟢 */
-
+.colorPickerButton{
+	width: -webkit-fill-available;
+}
+#languageSelector{
+	width: -webkit-fill-available;
+}
 html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	scrollbar-width: none; /* For Firefox */
+}
+
+.html::-webkit-scrollbar {
+	display: none;
 }
 
 body {
-    font-family: 'poppins', 'Poppins', sans-serif;
-     margin: 0;
-    padding: 0;
-    background-color: var(--bg-color-blue);
-    color: var(--textColorDark-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
+	background-color: var(--bg-color-blue);
+	color: var(--textColorDark-blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100%;
+	/* background-color: red; */
+	overflow: auto;
+	background-image: var(--bg-image, none);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100vh; /* Ensure the image fits the viewport height */
+	margin: 0; /* Remove margin to avoid unwanted spacing */
 }
 
-.centerDiv {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: fit-content;
-    height: fit-content;
-    /* background-color: #17a638; */
-    /* always leave enough space for the shortcuts bar at the bottom */
-    padding-bottom: calc(var(--shortcut-size) + var(--gap) * 2);
+
+/* Search suggestions box */
+.resultBox {
+	max-height: 222px;
+	overflow-y: auto;
+	position: absolute;
+	bottom: -100px;
+	left: 0;
+	width: 100%;
+	border-radius: 25px;
+	padding: 5px 10px;
+	scrollbar-width: none;
+	/* Initially hidden */
+	opacity: 0;
+	z-index: -1000;
+	transform: translateY(-70px);
+	transition: opacity 0.5s ease, transform 0.5s ease, z-index 0.5s ease;
+	pointer-events: none;
 }
-md-outlined-text-field#userproxy {
-    width: -webkit-fill-available;
+
+@media screen and (max-height: 700px) {
+	.resultBox {
+		max-height: 180px;
+		bottom: -60px;
+	}
 }
-md-outlined-text-field#userLoc {
-    width: -webkit-fill-available;
+
+.resultBox::-webkit-scrollbar {
+	display: none;
+	/* For Chrome, Safari, and Edge */
 }
-md-outlined-text-field#userAPI {
-    width: -webkit-fill-available;
+
+/* Visible state: when you want the result box to appear */
+.resultBox.show {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	z-index: 1000;
+	pointer-events: all;
+}
+
+.resultItem {
+	padding: 8px;
+	cursor: pointer;
+	font-size: 1.1rem;
+	color: var(--textColorDark-blue);
+}
+
+.resultItem.active,
+.resultItem:hover {
+	background-color: var(--darkColor-blue);
+	border-radius: 15px;
+	color: #fff;
 }
 /* Button container styling */
 .button-container {
     display: flex;
-    flex-wrap: wrap;  /* Allows buttons to wrap onto the next line */
-    justify-content: center;  /* Center the buttons even when wrapped */
-    gap: 16px;  /* Add space between buttons */
+    margin-left: -11.5px;
+    width: 365px;
+    justify-content: flex-end;
+    gap: 16px;
     margin-bottom: 20px;
+    flex-direction: column;
 }
-
 /* For smaller screens or tight spaces */
 .button-container md-filled-button,
 md-outlined-button {
     flex: 1 1 auto;  /* Ensure buttons take up available space */
     min-width: 150px; /* Adjust as needed for your design */
 }
-.icon {
-    margin-bottom: 3px;
+/* ----------------- Google App Menu CSS Setup ----------------- */
+/* Dot Icon Container Styling */
+.googleAppsCont {
+	position: fixed;
+	display: inline-block;
+	margin: 10px;
+	top: var(--gap);
+	right: var(--gap);
+	font-size: 25px;
+	/* Set the size of the dots */
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+	/* Set z-index */
 }
+
+/* Styling for the SVG icon */
+.dot-icon {
+	fill: var(--darkColor-blue);
+	/* Icon color */
+	background-color: var(--accentLightTint-blue);
+	border-radius: 25%;
+	padding: 1px;
+	cursor: pointer;
+}
+
+.theme-transition .dot-icon{
+	transition: fill 0.3s ease;
+}
+
+/* Click effect for the icon */
+.dot-icon:active {
+	fill: var(--darkerColor-blue);
+}
+
+/* Tooltip Text Styling */
+.tooltip-text {
+	visibility: hidden;
+	background-color: var(--darkColor-blue);
+	color: rgba(255, 255, 255, 0.9);
+	text-align: center;
+	padding: 5px;
+	border-radius: 8px;
+	position: absolute;
+	top: 120%;
+	/* Position below the icon */
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 12px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	white-space: nowrap;
+	z-index: 3;
+	/* Set z-index */
+}
+
+/* Show tooltip on hover */
+.googleAppsCont:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Ensure tooltip remains hidden when menu is visible */
+.menu-open .tooltip-text {
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+/* Separator Styling */
+.separator {
+	width: 100%;
+	height: 1px;
+	background-color: var(--darkColor-blue);
+	/* Adjust color as needed */
+	margin: 10px 0;
+	/* Adjust spacing as needed */
+}
+
+/* Add Separator in Icon Container */
+.icon-container .separator {
+	grid-column: span 3;
+	/* Ensure separator spans across all columns */
+}
+
+/* Icon Container Styling (Placed Below Dot Icon) */
+.icon-container {
+	display: grid;
+	gap: 10px;
+	padding: 20px 10px;
+	background-color: var(--accentLightTint-blue);
+	border-radius: 30px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	border: 8px solid var(--bg-color-blue);
+	grid-template-columns: repeat(3, 1fr);
+	/* 3 icons per row */
+	justify-items: center;
+	/* Center icons within each grid cell */
+	position: absolute;
+	top: 85px;
+	right: 15px;
+	max-height: calc(40px * 3 + 10px * 2 + 290px);
+	/* Limit to 12 icons (3 rows * icon size + gaps) */
+	overflow-y: auto;
+	/* Add vertical scrollbar when needed */
+	box-sizing: border-box;
+	z-index: 3; /* This should be higher that z-index of [.googleAppsCont] */
+}
+
+/* Individual Icon Item Styling */
+.icon-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	min-width: 100px;
+	/* Ensure consistent width */
+	background-color: var(--accentLightTint-blue);
+	/* Default background */
+}
+
+/* Icon Styling */
+.menuicon {
+	color: var(--darkColor-blue);
+	width: 40px;
+	height: 40px;
+	margin-bottom: 8px;
+}
+
+/* Label Styling */
+.label {
+	font-size: 14px;
+	color: var(--textColorDark-blue);
+}
+
+/* Short Label (Default) */
+.label.short {
+	display: block;
+}
+
+/* Full Label (Hidden by Default) */
+.label.full {
+	display: none;
+	white-space: pre-line;
+	/* Ensure text retains line breaks */
+	text-align: center;
+	/* Center align text */
+	position: absolute;
+	font-size: 0.8rem;
+	bottom: 0;
+}
+
+/* Hover Effect for Icon Item */
+.icon-item:hover {
+	background-color: var(--bg-color-blue);
+	transform: scale(1.1);
+	/* Add zoom-in effect */
+}
+
+/* Show Full Label on Hover for Multi-word Labels */
+.icon-item:hover .label.full {
+	display: block;
+}
+
+.icon-item:hover .label.short {
+	display: block;
+	/* Ensure single-word labels remain visible */
+}
+
+.icon-item:hover .label.short.one {
+	display: none;
+	/* Ensure single-word labels remain visible */
+}
+
+/* Customize scrollbar to appear on the border */
+/* For Chrome, Edge, Safari */
+.icon-container::-webkit-scrollbar {
+	width: 5px;
+}
+
+.icon-container::-webkit-scrollbar-track {
+	background-color: transparent;
+	margin: 11px 0;
+}
+
+.icon-container::-webkit-scrollbar-thumb {
+	background-color: var(--darkColor-blue);
+	border-radius: 3px;
+}
+
+.icon-container::-webkit-scrollbar-thumb:hover {
+	background-color: var(--darkerColor-blue);
+	border-radius: 3px;
+}
+
+/* For Firefox */
+@-moz-document url-prefix() {
+	.icon-container {
+		scrollbar-width: thin;
+		scrollbar-color: var(--darkColor-blue) transparent;
+	}
+}
+/* ----------------- End of Google App Menu ----------------- */
+
+/* ----------------- Start of Bookmark System ----------------- */
+
+#bookmarksContainer {
+	background-color: #0000004f;
+	backdrop-filter: blur(15px) saturate(160%);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	opacity: 0;
+	transition: all 0.5s;
+	pointer-events: none;
+	z-index: 4;
+}
+
+#bookmarksContainer:has(.bookmark-sidebar.open) {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.bookmark-button {
+	position: fixed;
+    display: inline-block;
+    margin: 10px;
+    top: var(--gap);
+    right: var(--gap);
+    font-size: 25px;
+	background-color: var(--accentLightTint-blue);
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+	padding: 6px;
+	border-radius: 25%;
+	transition: right 0.3s ease;
+}
+
+.bookmark-button:has(~ .googleAppsCont[style="display: flex;"]) {
+    right: calc(2 * var(--gap) + 36px);
+}
+
+/* Show tooltip on hover */
+.bookmark-button:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.bookmark-button svg {
+	fill: var(--darkColor-blue);
+	background-color: var(--accentLightTint-blue);
+}
+
+.bookmark-sidebar {
+	width: 380px;
+	position: fixed;
+	right: -380px;
+	top: 0;
+	height: 100%;
+	background-color: var(--accentLightTint-blue);
+	color: white;
+	transition: right 0.3s ease;
+	z-index: 5;
+	display: block;
+	border-radius: 0 0 0 var(--round);
+	box-sizing: border-box;
+}
+
+.bookmark-sidebar .topOutRoundCorner{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: -30px;
+}
+
+.bookmark-sidebar-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+.bookmark-sidebar.open {
+	right: 0;
+}
+
+body #bookmarkButton.bookmark-button.rotate {
+	color: var(--accentLightTint-blue);
+	right: 412px;
+	z-index: 5;
+}
+
+.bookmark-sidebar-header {
+	padding: 30px 20px 50px 20px;
+	background-color: var(--bg-color-blue);
+}
+
+.bookmark-sidebar-header h2 {
+	color: var(--textColorDark-blue);
+	text-align: center;
+	font-size: 1.5rem;
+	flex-grow: 1;
+}
+
+.bookmark-search-container {
+	position: relative;
+	width: 100%;
+	padding: 30px 10px 16px 10px;
+	border-radius: var(--round);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--accentLightTint-blue);
+	margin-top: -30px;
+	position: relative;
+}
+
+.bookmark-search-container::after {
+	content: '';
+	background: url('./svgs/bookmarksSearch.svg') no-repeat center / contain;
+	width: 18px;
+    filter: invert(1);
+    height: 18px;
+    opacity: 0.5;
+    left: 9%;
+    top: calc(50% + 7px);
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+#bookmarkSearch {
+	width: 95%;
+	padding: 10px 36px 10px 43px;
+	border-radius: var(--round);
+	font-size: 16px;
+	background-color: var(--whitishColor-blue);
+	color: var(--textColorDark-blue);
+	outline: none !important;
+	border: none !important;
+}
+
+#bookmarkSearch::placeholder {
+	color: var(--textColorDark-blue);
+	opacity: 0.7;
+}
+
+#clearSearchButton {
+	position: absolute;
+	right: 9%;
+	top: calc(50% + 7px);
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	color: var(--textColorDark-blue);
+	cursor: pointer;
+	display: none; /* Hidden by default */
+}
+
+#bookmarkList {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	height: calc(100% - 230px);
+	overflow-y: auto;  /* Add vertical scrollbar */
+	overflow-x: hidden;
+}
+
+#bookmarkList::-webkit-scrollbar {
+	width: 6px;
+}
+
+#bookmarkList::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+#bookmarkList::-webkit-scrollbar-thumb {
+	background-color: var(--darkColor-blue);
+	border-radius: 3px;
+}
+
+#bookmarkList::-webkit-scrollbar-thumb:hover {
+	background-color: var(--darkerColor-blue);
+	border-radius: 3px;
+}
+
+/* For Firefox */
+@-moz-document url-prefix() {
+	#bookmarkList {
+		scrollbar-width: thin;
+		scrollbar-color: var(--darkColor-blue) transparent;
+	}
+}
+
+.bookmark-view-as-container {
+	display: flex;
+	box-sizing: border-box;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 32px;
+	& h3 {
+		font-size: 1rem;
+		color: var(--darkerColor-blue);
+	}
+}
+
+.bookmark-view-as-container .bookmark-view-as-button {
+	background: transparent;
+	border-radius: 20px;
+	border: 2px solid var(--darkColor-blue);
+	color: var(--darkColor-blue);
+	min-width: 60px;
+	font-size: 12px;
+	padding: 2px 9px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.bookmark-view-as-container #bookmarkGridCheckbox:is(:checked) ~ #bookmarkViewGrid,
+.bookmark-view-as-container #bookmarkGridCheckbox:is(:not(:checked)) ~ #bookmarkViewList {
+	background: var(--darkColor-blue);
+	color: white;
+}
+
+#bookmarkList ul {
+	padding-left: 10px;
+	list-style-type: none;
+	font-weight: normal;
+}
+
+#bookmarkList .folder ul{
+	padding-top: 10px;
+}
+
+#bookmarkList li {
+	padding: 2px;
+	border: none;
+	position: relative;
+}
+#bookmarkList li:is(.folder) {
+	padding: 10px 0 10px 10px;
+}
+
+#bookmarkList li:not(.folder) {
+	display: flex;
+	width: calc(100% - 10px);
+}
+
+#bookmarkList:is(.grid-view) ul:not(.hidden), #bookmarkList:is(.grid-view) .folder.open > ul {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+
+	.folder {
+		grid-column: span 4;
+	}
+}
+
+#bookmarkList:is(.grid-view) li:not(.folder) {
+	width: 100%;
+	padding-bottom: 6px;
+}
+
+#bookmarkList:is(.grid-view) li a {
+	padding: 2px;
+    flex-direction: column;
+}
+#bookmarkList:is(.grid-view) li a .favicon {
+	margin: 20px auto 24px auto;
+}
+#bookmarkList:is(.grid-view) li a:has(.favicon)::after, #bookmarkList:is(.grid-view) li a:has(.favicon)::before {
+	content: '';
+    background: var(--bg-color-blue);
+    position: absolute;
+    width: 48px;
+    height: 48px;
+	z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.35;
+    top: 12px;
+	box-sizing: border-box;
+	border-radius: 32px;
+}
+#bookmarkList:is(.grid-view) li a:has(.favicon)::before {
+    background: var(--bg-color-blue);
+    width: 36px;
+    height: 36px;
+    opacity: 1;
+    top: 18px;
+}
+
+#bookmarkList li a {
+	color: var(--textColorDark-blue);
+	text-decoration: none;
+	/* word-break: break-word; */
+	padding: 8px;
+	padding-right: 24px;
+	border-radius: 8px;
+	width: 100%;
+	display: flex;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#bookmarkList li a span {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#bookmarkList:is(.grid-view) li a span {
+	text-align: center;
+}
+
+
+.favicon {
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	vertical-align: middle;
+	filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+}
+
+#bookmarkList:is(.grid-view) .favicon {
+	width: 24px;
+	height: 24px;
+}
+
+.folder {
+	cursor: pointer;
+	font-weight: bolder;
+	color: var(--textColorDark-blue);
+}
+
+.hidden {
+	display: none;
+}
+
+.ui {
+	display: block;
+	pointer-events: none; /* Make ui class button unclickable */
+}
+
+.folder svg {
+	margin-right: 5px; /* Adjust this value for more or less space */
+	vertical-align: middle; /* Aligns the icon with the text */
+}
+
+.folder ul {
+	padding-left: 20px;
+}
+
+.folder.open > ul {
+	display: block;
+}
+
+#bookmarkList:is(.grid-view)  .bookmark-delete-button {
+	top: 12px;
+	right: 6px;
+}
+
+.bookmark-delete-button {
+	background: none;
+	border: none;
+	color: var(--darkColor-blue);
+	cursor: pointer;
+	position: absolute;
+	right: 10px; /* Position it to the right */
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+	pointer-events: none;
+}
+
+:hover > .bookmark-delete-button {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* ----------------- End of Bookmark System ----------------- */
+
+/* ------------------ To Do List Section -------------------- */
+
+.todoListCont {
+	position: fixed;
+	display: inline-block;
+	margin: 10px;
+	top: var(--gap);
+	left: var(--gap);
+	font-size: 25px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+	/* Set z-index */
+}
+
+/* Show tooltip on hover */
+.todoListCont:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.todo-container {
+	display: grid;
+	gap: 10px;
+	padding: 10px 5px;
+	background-color: var(--bg-color-blue);
+	border-radius: 30px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	border: 8px solid var(--bg-color-blue);
+	grid-template-columns: 320px;
+	justify-items: center;
+	position: absolute;
+	top: 85px;
+	left: 15px;
+	max-height: calc(40px * 3 + 10px * 2 + 290px);
+	overflow-y: auto;
+	box-sizing: border-box;
+	z-index: 3;
+}
+
+.todo-container::-webkit-scrollbar {
+	width: 5px;
+}
+
+.todo-container::-webkit-scrollbar-track {
+	background-color: transparent;
+	margin-top: 108px;
+	margin-bottom: 11px;
+}
+
+.todo-container::-webkit-scrollbar-thumb {
+	background-color: var(--darkColor-blue);
+	border-radius: 3px;
+}
+
+.todo-container::-webkit-scrollbar-thumb:hover {
+	background-color: var(--darkerColor-blue);
+	border-radius: 3px;
+}
+
+/* For Firefox */
+@-moz-document url-prefix() {
+	.todo-container {
+		scrollbar-width: thin;
+		scrollbar-color: var(--darkColor-blue) transparent;
+	}
+}
+
+#todoAdd {
+	height: 40px;
+	border-radius: 100px;
+	padding: 1px 13px 0 13px;
+	border: none;
+	font-size: 1.5rem;
+	background-color: var(--darkColor-blue);
+	color: white;
+	scale: 0.78;
+}
+
+#todoAdd:hover {
+	background-color: var(--darkerColor-blue);
+	color: #fff;
+	cursor: pointer;
+}
+
+#todoAdd:active {
+	transform: scale(0.9);
+}
+
+.theme-transition #todoAdd {
+    transition: all 0.3s;
+}
+
+#todoInput {
+	width: 100%;
+	height: 80%;
+	margin: auto auto auto 16px;
+	outline: none;
+	border: none;
+	background-color: #00000000;
+	padding: 0 2px;
+	font-size: 1rem;
+}
+
+.dark-theme #todoInput {
+	color: #FFF;
+}
+
+/* Default placeholder color */
+#todoInput::placeholder {
+	color: #757575;
+}
+
+.todo-container .searchbar-content {
+	background: var(--accentLightTint-blue);
+	padding: 0;
+	border-radius: 20px;
+	width: 100%;
+}
+
+.todolist{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.todolistitem{
+	width: 100%;
+	display: flex;
+	background-color: var(--darkColor-blue);
+	color: #FFF;
+	border-radius: 8px;
+	list-style-type: none;
+	font-size: 1rem;
+	padding: 12px 56px 12px 32px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+	word-break: break-word;
+}
+
+.todolistitem::before{
+	content: '';
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background: url('./svgs/todo-check-stroke.svg') no-repeat center center / contain;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 8px;
+	transition: all 0.3s ease;
+	user-select: none;
+}
+
+.todolistitem.checked::before{
+	background-image: url('./svgs/todo-check-fill.svg');
+}
+
+.todolistitem.checked{
+	color: #CCC;
+	text-decoration: line-through;
+}
+
+.todolistitem .todoremovebtn, .todolistitem .todopinbtn {
+	position: absolute;
+	right: 6px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	font-size: 22px;
+	line-height: 1.2;
+	color: var(--bg-color-blue);
+	text-align: center;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+	user-select: none;
+}
+
+.todolistitem .todoremovebtn {
+	scale: 1.05;
+}
+
+.todolistitem .todoremovebtn:hover {
+	color: #FFF;
+}
+
+.todolistitem .todopinbtn {
+	right: 28px;
+	background: url('./svgs/todo-pin-stroke.svg') no-repeat center center / contain;
+}
+
+.todolistitem.pinned .todopinbtn {
+	background-image: url('./svgs/todo-pin-fill.svg');
+}
+
+.todolistitem:first-child {
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+}
+.todolistitem:last-child {
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+}
+
+/* ---------------------------------------------------------- */
+
+.centerDiv {
+	display: grid;
+	grid-template-columns: auto auto;
+	width: fit-content;
+	height: fit-content;
+	/* background-color: #17a638; */
+	/* always leave enough space for the shortcuts bar at the bottom */
+	padding-bottom: calc(var(--shortcut-size) + var(--gap) * 2);
+}
+
 /* ____________Clock_____________________---- */
 #digitalClock {
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	position: relative;
 }
+
 #analogClock {
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	position: relative;
 }
+
 #clock svg {
-    position: absolute;
-    animation: clockAnm 1s;
+	position: absolute;
+	animation: clockAnm 1s;
 }
 
 @keyframes clockAnm {
-    from {
-        transform: rotate(40deg);
-    }
+	from {
+		transform: rotate(40deg);
+	}
 
-    to {
-        transform: rotate(0deg);
-    }
+	to {
+		transform: rotate(0deg);
+	}
 }
 
 .clock .centerPoint {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 .clock .centerPoint .sui {
-    position: absolute;
-    width: 20px;
-    height: 100px;
-    background-color: var(--darkColor-blue);
-    top: -90px;
-    transform-origin: bottom;
-    border-radius: 10px;
+	position: absolute;
+	width: 20px;
+	height: 100px;
+	background-color: var(--darkColor-blue);
+	top: -90px;
+	transform-origin: bottom;
+	border-radius: 10px;
 }
 
 #hour {
-    height: 80px;
-    top: -70px;
-    background-color: var(--darkerColor-blue);
-    transform: rotate(90deg);
-    transition: transform 1.50s;
+	height: 80px;
+	top: -70px;
+	background-color: var(--darkerColor-blue);
+	transform: rotate(90deg);
+	transition: transform 1.5s;
 }
 
 #hour::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 30px;
-    background-color: var(--darkerColor-blue);
-    bottom: -10px;
-    border-radius: 100px;
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 30px;
+	background-color: var(--darkerColor-blue);
+	bottom: -10px;
+	border-radius: 100px;
 }
 
 #minute {
-    z-index: 9 !important;
-    transition: transform 1.50s;
+	z-index: 9 !important;
+	transition: transform 1.5s;
 }
 
 #minute::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 30px;
-    background-color: var(--darkColor-blue);
-    bottom: -10px;
-    border-radius: 100px;
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 30px;
+	background-color: var(--darkColor-blue);
+	bottom: -10px;
+	border-radius: 100px;
 }
 
 #second {
-    background-color: #00000000;
-    transition: transform 1s;
+	background-color: #00000000;
+	transition: transform 1s;
 }
 
 #second::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--darkColor-blue);
-    top: -28px;
-    border-radius: 100%;
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: var(--darkColor-blue);
+	top: -28px;
+	border-radius: 100%;
 }
 
 /* ---------------------- */
 .ttteexxtt {
-    position: absolute;
-    /* background-color: yellow; */
-    bottom: 18px;
-    /*Because search engines has margin-bottom 20px*/
-    left: 5px;
+	position: absolute;
+	/* background-color: yellow; */
+ 	/*bottom: 18px; */
+	/*Because search engines has margin-bottom 20px*/
+	bottom: 8px;
+	left: 10px;
+ 	/*text-align: center; */
 }
 
 #userText {
-    font-family: 'poppins', serif;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+	font-family: var(--main-font-family);
+	font-size: 1.4rem;
+	margin-bottom: 10px;
 }
 
 #date {
-    font-size: 1.4rem;
+	font-size: 1.4rem;
 }
-.digidate{
-    fill:var(--darkerColor-blue)
+
+.digidate {
+	fill: var(--textColorDark-blue);
 }
+
+.amPm {
+	fill: var(--textColorDark-blue);
+}
+
 .digiclock {
-    text-anchor:middle;
-    fill: var(--darkColor-blue);
-    font-size: 8rem;
-    font-weight: lighter;
-    /* background-color: yellow; */
-    margin: auto;
-    width: fit-content;
+	text-anchor: middle;
+	fill: var(--darkColor-blue);
+	font-size: 8rem;
+	font-weight: lighter;
+	/* background-color: yellow; */
+	margin: auto;
+	width: fit-content;
 }
+
+#digihours {
+	fill: var(--darkerColor-blue);
+}
+
+#digicolon {
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
 /* __________end of clock___________________ */
 .leftDiv {
-    /* padding-right: 100px; */
-    transform: translateX(-100px);
-    /* background-color: rgba(102, 51, 153, 0.404); */
-    /* height: fit-content; */
+	/* padding-right: 100px; */
+	transform: translateX(-100px);
+	/* background-color: rgba(102, 51, 153, 0.404); */
+	/* height: fit-content; */
 }
 
 .rightDiv {
-    position: relative;
-    width: 640px;
-    transform: translateX(100px);
+	position: relative;
+	width: 640px;
+	transform: translateX(100px);
 }
 
 .rightDiv .topDiv {
-    height: 196px;
-    display: flex;
-    justify-content: flex-end;
+	height: 196px;
+	display: flex;
+	justify-content: flex-end;
 }
 
 /* lrectangle______________________ */
 .rightDiv .topDiv .lrectangle {
-    height: 100%;
-    width: 100%;
-    border-radius: var(--round);
-    padding: 20px;
-    position: relative;
+	height: 100%;
+	width: 100%;
+	border-radius: var(--round);
+	padding: 20px;
+	position: relative;
 }
 
 #conditionText {
-    font-size: 1.2rem;
-    color: var(--textColorDark-blue);
+	font-size: 1.2rem;
+	color: var(--textColorDark-blue);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 372px;
 }
 
 .cconnt {
-    width: calc(100% - 40px);
-    bottom: 20px;
-    height: fit-content;
-    position: absolute;
-    font-size: 1rem;
+	width: calc(100% - 40px);
+	bottom: 20px;
+	height: fit-content;
+	position: absolute;
+	font-size: 1rem;
 }
 
 .tilesContainer {
-    height: 50px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+	height: 50px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
 
 .tilesContainer .tiles {
-    background-color: #ffffff;
-    border-radius: 22px;
-    position: relative;
-    height: 50px;
+	background-color: var(--whitishColor-blue);
+	border-radius: 22px;
+	position: relative;
+	height: 50px;
 }
 
 .tilesContainer .location {
-    background-color: var(--darkColor-blue);
+	background-color: var(--darkColor-blue);
 }
 
 .tilesContainer .location .location_spn {
-    color: #fff;
+	color: #fff;
 }
 
 .tilesContainer .tiles .icon {
-    height: 100%;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	height: 100%;
+	aspect-ratio: 1/1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .tilesContainer .tiles span {
-    position: absolute;
-    top: 0;
-    left: 46px;
-    bottom: 0;
-    margin: auto;
-    color: var(--textColorDark-blue);
-    height: fit-content;
+	position: absolute;
+	top: 0;
+	left: 46px;
+	bottom: 0;
+	margin: auto;
+	color: var(--textColorDark-blue);
+	height: fit-content;
 }
 
-
-
 .humidityBar {
-    border-radius: 20px;
-    height: 40px;
-    width: 100%;
-    margin-bottom: 20px;
-    position: relative;
+	border-radius: 20px;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 20px;
+	position: relative;
 }
 
 .humidityBar::after {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 40px;
-    background-size: 66%;
-    background: var(--darkColor-blue) url("./humidity.svg") no-repeat center center;
-    right: 0;
-    border-radius: 100%;
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 40px;
+	background-size: 66%;
+	background: var(--darkColor-blue) url("./svgs/humidity.svg") no-repeat center
+		center;
+	right: 0;
+	border-radius: 100%;
 }
 
 .humidityBar .thinLine {
-    position: absolute;
-    width: calc(100% - 60px);
-    background-color: white;
-    height: 6px;
-    border-radius: 10px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+	position: absolute;
+	width: calc(100% - 60px);
+	background-color: var(--whitishColor-blue);
+	height: 6px;
+	border-radius: 10px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 .humidityBar .slider {
-    height: 100%;
-    width: calc(10% - 60px);
-    /*100-60px because humidityIconContainer is 40px Width and 20px is margin which is = to 60*/
-    min-width: 42%;
-    background-color: var(--darkColor-blue);
-    border-radius: 100px;
-    position: absolute;
-    transition: width 1s;
+	height: 100%;
+	width: calc(10% - 60px);
+	/*100-60px because humidityIconContainer is 40px Width and 20px is margin which is = to 60*/
+	min-width: 42%;
+	background-color: var(--darkColor-blue);
+	border-radius: 100px;
+	position: absolute;
+	transition: width 1s;
 }
 
 #humidityLevel {
-    color: #fff;
-    /* background-color: yellow; */
-    width: fit-content;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    left: 20px;
-    height: fit-content;
+	color: #fff;
+	width: fit-content;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	left: 20px;
+	height: fit-content;
 }
 
-/* End of _____________________- */ 
+/* End of _____________________- */
 
 /* ------------Weather Pill------------- */
 .rightDiv .topDiv .rAndakar {
-    position: relative;
-    height: 100%;
-    aspect-ratio: 1/1;
-    margin-left: var(--gap);
-    animation: rAndAnm 1s;
-    /* transition: rotate 1s; */
+	position: relative;
+	height: 100%;
+	aspect-ratio: 1/1;
+	margin-left: var(--gap);
+	animation: rAndAnm 1s;
+	/* transition: rotate 1s; */
 }
 
 @keyframes rAndAnm {
-    from {
-        transform: rotate(-45deg);
-    }
+	from {
+		transform: rotate(-45deg);
+	}
 
-    to {
-        transform: rotate(0deg);
-    }
+	to {
+		transform: rotate(0deg);
+	}
 }
 
 .rightDiv .topDiv .rAndakar .wInfo {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateX(14px);
-    width: 100px;
-    height: 80%;
-    /* background-color: #17a638; */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transform: translateX(14px);
+	width: 100px;
+	height: 80%;
 }
 
 #temp {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: var(--darkerColor-blue);
-    /* background-color: yellow; */
-    margin: auto;
-    width: fit-content;
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: var(--darkerColor-blue);
+	margin: auto;
+	width: fit-content;
+}
+
+.tempUnit {
+	font-size: 0.4em;
+	position: relative;
+	top: -1.1em;
+	left: 3px;
+	color: var(--darkColor-blue);
 }
 
 #wIcon {
-    width: 80px;
-    height: 80px;
-    margin-top: -20px;
-    margin-left: -40px;
-    /* background-color: olive; */
+	width: 80px;
+	height: 80px;
+	margin-top: -11px;
+	margin-left: -30px;
 }
 
 /* ------------End of Weather Pill------------- */
@@ -577,40 +1517,135 @@ md-outlined-button {
 
 /* _____________Searchbar___________________ */
 .searchbar {
-    margin-top: var(--gap);
-    width: 100%;
-    height: 60px;
-    border-radius: var(--round);
-    /* background-color: var(--accentLightTint-blue); */
-    position: relative;
-    outline: 2px solid #00000000;
-    transition: outline 0.3s;
+	margin-top: var(--gap);
+	width: 100%;
+	height: 60px;
+	border-radius: var(--round);
+	/* background-color: var(--accentLightTint-blue); */
+	position: relative;
+	outline: 2px solid #00000000;
+	transition: outline 0.3s;
 }
 
 .searchbar.active {
-    outline: 2px solid var(--darkColor-blue);
+	outline: 2px solid var(--darkColor-blue);
+}
+.searchbar .searchIcon {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	margin-top: 14px;
+    margin-left: 14px;
 }
 
-
+.searchbar-content {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding-right: 10px;
+}
 
 #searchQ {
-    display: block;
-    position: absolute;
-    height: 80%;
-    width: calc(100% - 120px);
-    top: 0;
-    bottom: 0;
-    margin: auto auto auto 20px;
-    outline: none;
-    border: none;
-    background-color: #00000000;
-    border-radius: 100px;
-    padding: 0 40px;
-    font-size: 1rem;
+	flex-grow: 1;
+	height: 80%;
+	top: 0;
+	bottom: 0;
+	margin: auto auto auto 20px;
+	outline: none;
+	border: none;
+	background-color: #00000000;
+	padding: 0 2px;
+	margin-left: 55px;
+	font-size: 1rem;
 }
 
+/* Default placeholder color */
+#searchQ::placeholder {
+	color: #757575;
+}
+
+/* Placeholder color when the condition is met */
+/* #searchQ.darker-placeholder::placeholder {
+	color: #3c3c3c;
+} */
+
+.searchControls {
+	margin-left: 10px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+/* --------- .micIcon------------- */
+
+.micIcon {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	color: var(--darkColor-blue);
+	cursor: pointer;
+	border-radius: 50%;
+	padding: 3px;
+	box-sizing: border-box;
+	background-color: var(--whitishColor-blue);
+	/* transition: all 0.5s; */
+	border: 2px solid transparent;
+}
+
+.theme-transition .micIcon {
+    transition: all 0.5s;
+}
+
+.micIcon::after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	border: 2px solid transparent;
+	top: -4px;
+	left: -4px;
+}
+
+.micActive::after,
+.micIcon:hover::after {
+	border-left: 2px dotted var(--darkColor-blue);
+	border-right: 2px solid var(--darkColor-blue);
+	border-top: 2px dashed var(--darkerColor-blue);
+	border-bottom: 2px dashed var(--darkerColor-blue);
+	animation: micAnimation 1s ease-in-out infinite;
+	transition: all 0.5s;
+}
+
+.micIcon:hover {
+	background-color: #fffffff2;
+}
+
+@keyframes micAnimation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	37% {
+		transform: rotate(-20deg);
+	}
+
+	69% {
+		transform: rotate(20deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* ---------End of .micIcon------------- */
 .enterBtn {
-    position: absolute;
     right: 10px;
     top: 0;
     bottom: 0;
@@ -618,938 +1653,1197 @@ md-outlined-button {
     height: 40px;
     padding: 0 26px;
     font-size: 1.1rem;
+	margin-left: 0.5rem;
 }
 
-
-.spacer {
-    height: 50px; /* Adjust this value to create space */
+#enterBtn:hover {
+	background-color: var(--darkColor-blue);
+	color: #fff;
+	cursor: pointer;
 }
 
+#enterBtn:active {
+	transform: scale(0.9);
+}
+
+.theme-transition #enterBtn {
+    transition: all 0.3s;
+}
 
 /* ________________End of Searchbar______________________ */
-.searchIcon { 
-    position: absolute;
-    margin-top: 14px;
-    margin-left: 14px;
-}
-.searchEnginesContainer .search-engine {
-    /* background-color: var(--accentLightTint-blue); */
-    border-radius: 20px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
 
 .searchWithCont {
-    margin-top: var(--gap);
-    border-radius: var(--round);
-    position: relative;
-    display: flex;
-    font-size: 1rem;
+	margin-top: var(--gap);
+	border-radius: var(--round);
+	position: relative;
+	display: flex;
+	font-size: 1rem;
 }
 
 .searchWithCont .hint {
-    /* background-color: var(--accentLightTint-blue); */
-    width: 200px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    position: relative;
-    margin-right: 16px;
-    border-radius: var(--round);
+	/* background-color: var(--accentLightTint-blue); */
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	position: relative;
+	margin-right: 16px;
+	border-radius: var(--round);
 }
 
 .searchWithCont .hint::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 100%;
-    background-color: var(--accentLightTint-blue);
-    border-radius: 3px;
-    right: -20px;
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background-color: var(--accentLightTint-blue);
+	border-radius: 3px;
+	right: -20px;
 }
 
 .searchEnginesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 20px;
-    gap: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding-left: 20px;
 }
+
+.searchEnginesContainer .search-engine {
+	/* background-color: var(--accentLightTint-blue); */
+	border-radius: 20px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.searchEnginesContainer .search-engine svg{
+	width: 30px;
+	height: 30px;
+	background-color: var(--darkColor-blue);
+	border-radius: 100%;
+	margin-left: 4px;
+	padding: 3px;
+}
+
+.searchEnginesContainer .search-engine label {
+	margin: 0 16px 0 10px;
+	cursor: pointer;
+}
+
+/* -----------Radio Button Customizing------------ */
+.search-engine input[type="radio"] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: var(--whitishColor-blue);
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	border: 2px solid var(--whitishColor-blue);
+	outline: none;
+	margin-right: 8px;
+	cursor: pointer;
+	/* transition: 0.2s; */
+}
+
+.search-engine input[type="radio"]:checked {
+	background-color: var(--darkColor-blue);
+}
+
+.theme-transition .search-engine input[type="radio"] {
+    transition: 0.2s;
+}
+
+/* -----------end of Radio Button Customizing------------ */
+
 /* ----------Shortcuts----------------- */
 
 #shortcuts-section {
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: calc(var(--shortcut-size) + var(--gap) * 2);
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-#shortcuts-section .unfoldContainer {
-    transition: transform 0.5s;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    display: flex;
-    justify-content: center;
-}
-
-#shortcuts-section #unfoldShortcutsBtn {
-    display: none;
-    pointer-events: auto;
-    fill: var(--textColorDark-blue);
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-    transition: 0.2s all;
-    transform-origin: 50% 25%;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: calc(var(--shortcut-size) + var(--gap) * 2);
+	position: absolute;
+	/* background: gold; */
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 #shortcuts-section .wrapper {
-    position: relative;
-    height: fit-content;
-    display: inline-flex; /* make sure elements are next to each other */
-    align-items: stretch; /* make sure both elements grow to the same height */
-    width: fit-content;
+	position: relative;
+	height: fit-content;
+	display: inline-flex;
+	/* make sure elements are next to each other */
+	align-items: stretch;
+	/* make sure both elements grow to the same height */
+	width: fit-content;
 }
 
 /* Invisible element tracking height changes */
 #shortcuts-section #flexMonitor {
-    position: absolute;
-    height: 100%; /* This will match the height of .shortcutsContainer, which it is supposed to monitor */
-    visibility: hidden;
- }
+	position: absolute;
+	height: 100%;
+	/* This will match the height of .shortcutsContainer, which it is supposed to monitor */
+	visibility: hidden;
+}
 
 /* Invisible element to get standard height */
 #shortcuts-section #defaultMonitor {
-    position: absolute;
-    /* This is the standard height of one row */
-    height: calc(var(--shortcut-size) + var(--gap) + var(--shortcut-bar-gap-and-padding));
-    visibility: hidden;
- }
+	position: absolute;
+	/* This is the standard height of one row */
+	height: calc(
+		var(--shortcut-size) + var(--gap) + var(--shortcut-bar-gap-and-padding)
+	);
+	visibility: hidden;
+}
 
 .shortcutsContainer {
-    pointer-events: auto;
-    transition: transform 0.5s;
-    margin-top: calc(var(--gap) - var(--shortcut-bar-gap-and-padding));
-    max-width: calc(
-            var(--max-shortcut-bar-width) -
-            mod(
-                var(--max-shortcut-bar-width) - var(--shortcut-bar-gap-and-padding),
-                var(--shortcut-size) + var(--shortcut-bar-gap-and-padding)
-            )
-    );
-    display: flex;
-    flex-wrap: wrap;
-    padding: var(--shortcut-bar-gap-and-padding);
-    justify-content: left;
-    width: fit-content;
-    gap: var(--gap) var(--shortcut-bar-gap-and-padding);
+	pointer-events: auto;
+	transition: transform 0.5s;
+	margin-top: calc(var(--gap) - var(--shortcut-bar-gap-and-padding));
+	max-width: calc(
+		var(--max-shortcut-bar-width) -
+			mod(
+				var(--max-shortcut-bar-width) - var(--shortcut-bar-gap-and-padding),
+				var(--shortcut-size) + var(--shortcut-bar-gap-and-padding)
+			)
+	);
+	display: flex;
+	flex-wrap: wrap;
+	padding: var(--shortcut-bar-gap-and-padding);
+	justify-content: center;
+	width: fit-content;
+	/* gap: var(--gap) var(--shortcut-bar-gap-and-padding); */
+	gap: 26px;
 }
 
 .shortcutsContainer::before {
-    border-radius: 34px;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--accentLightTint-blue);
-    z-index: -1;
-    opacity: var(--always-show-dock-background);
-    transition: opacity 0.5s;
-    pointer-events: none;
+	border-radius: 34px;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--accentLightTint-blue);
+	z-index: -1;
+	opacity: var(--always-show-dock-background);
+	transition: opacity 0.5s;
+	pointer-events: none;
 }
 
 .shortcutsContainer.showBackground::before {
-    opacity: 1;
+	opacity: 1;
 }
 
 .shortcutsContainer .shortcuts {
-    position: relative;
-    transition: all 0.3s;
+	position: relative;
+	transition: all 0.3s;
+	isolation: isolate;
 }
 
 .shortcutsContainer .shortcuts:hover {
-    transform: translateY(-10px) scale(1.06);
-    box-shadow: 0 5px 10px var(--accentLightTint-blue);
-    border-radius: 100px;
+	transform: translateY(-10px) scale(1.03);
+	/* box-shadow: 0 5px 10px var(--accentLightTint-blue); */
+	border-radius: 100px;
 }
 
 .shortcuts .shortcut-name {
-    visibility: hidden;
-    position: absolute;
-    bottom: -30px;
-    right: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    /* Center horizontally */
-    margin: auto;
-    /* background-color: #000000d7; */
-    width: fit-content;
-    text-align: center;
-    color: var(--textColorDark-blue);
-    opacity: 0;
-    transition: all 0.3s;
-    font-size: 1rem;
-    white-space: nowrap;
+	visibility: hidden;
+	position: absolute;
+	bottom: -30px;
+	right: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	/* Center horizontally */
+	margin: auto;
+	width: fit-content;
+	text-align: center;
+	color: var(--textColorDark-blue);
+	opacity: 0;
+	transition: all 0.3s;
+	font-size: 1rem;
+	white-space: nowrap;
 }
 
 .shortcuts:hover .shortcut-name {
-    visibility: visible;
-    opacity: 1;
+	visibility: visible;
+	opacity: 1;
 }
 
 .shortcutsContainer .shortcuts a {
-    border-radius: 100px;
-    display: block;
-    height: var(--shortcut-size);
-    width: var(--shortcut-size);
+	border-radius: 100px;
+	display: block;
+	height: var(--shortcut-size);
+	width: var(--shortcut-size);
 }
 
 .shortcutsContainer .shortcuts a:has(svg) {
-    background-color: var(--accentLightTint-blue);
+	background: radial-gradient(var(--accentLightTint-blue) 66%, transparent 66%);
 }
 
 .shortcutsContainer .shortcuts a:has(img) {
-    background-color: var(--darkColor-blue);
+	background-color: var(--darkColor-blue);
 }
 
 .shortcutsContainer .shortcuts a svg {
-    height: 100%;
-    width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 .shortcutsContainer .shortcuts .shortcutLogoContainer {
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
 }
 
 .shortcutsContainer .shortcuts .shortcutLogoContainer img {
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
 }
-
 
 /* ----------end of Shortcuts----------------- */
 
 /* -----------Ai-Tools----------------- */
 .aiToolsCont {
-    height: 50px;
-    width: fit-content;
-    /* background-color: yellow; */
-    overflow-x: hidden;
-    border-radius: 100px;
-    position: absolute;
-    left: var(--gap);
-    bottom: var(--gap);
-    margin: auto;
-    display: flex;
+	height: 50px;
+	width: fit-content;
+	/* background-color: yellow; */
+	overflow-x: hidden;
+	border-radius: 100px;
+	position: fixed;
+	left: var(--gap);
+	bottom: var(--gap);
+	margin: auto;
+	display: flex;
+
+    max-width: calc(100% - 140px);
+    overflow-x: scroll;
+	overflow-y: hidden;
+	scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.aiToolsCont::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Edge, Opera */
 }
 
 .aiToolsCont .hangno {
-    background-color: var(--accentLightTint-blue);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    border-radius: 100px;
-    z-index: 2;
+	background-color: var(--accentLightTint-blue);
+	height: 100%;
+	/* width: 131px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 16px;
+	border-radius: 100px;
+	z-index: 2;
+	cursor: pointer;
 }
 
 .aiToolsCont .hangno .icon {
-    width: 26px;
-    height: 26px;
-    margin-right: 12px;
+	width: 26px;
+	height: 26px;
+	margin-right: 12px;
 }
 
 .aiToolsCont .hangno .label {
-    font-size: 1rem;
-    color: var(--textColorDark-blue);
-    cursor: default;
+	font-size: 1rem;
+	color: var(--textColorDark-blue);
+	cursor: pointer;
+	width: fit-content;
+    	min-width: 61px; /* 61px is working fine for english lang */
 }
 
 .aiToolsCont .toolsCont {
-    /* display: flex; */
-    display: none;
-    /* background-color: orange; */
-    position: relative;
-    margin-left: 30px;
-    transition: all 500ms;
-    gap: 0;
-    transform-origin: left;
-    transform: scale(0.5) translateX(-70px);
-    opacity: 0.2;
+	/* display: flex; */
+	display: none;
+	/* background-color: orange; */
+	position: relative;
+	margin-left: 30px;
+	transition: all 500ms;
+	gap: 0;
+	transform-origin: left;
+	transform: scale(0.5) translateX(-70px);
+	opacity: 0.2;
 }
 
 .aiToolsCont .toolsCont::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 6px;
-    background-color: var(--accentLightTint-blue);
-    border-radius: 6px;
-    left: -18px;
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 6px;
+	background-color: var(--accentLightTint-blue);
+	border-radius: 6px;
+	left: -18px;
+}
+#firefly{
+	width: 103px;
 }
 
 .aiToolsCont .toolsCont a {
-    background-color: var(--accentLightTint-blue);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    border-radius: 100px;
-    text-decoration: none;
-    color: var(--textColorDark-blue);
-    font-size: 1rem;
+	background-color: var(--accentLightTint-blue);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 16px;
+	border-radius: 100px;
+	text-decoration: none;
+	color: var(--textColorDark-blue);
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.aiToolsCont .toolsCont a:hover {
+	background-color: var(--bg-color-blue);
+	box-shadow: inset 0 0 0 1px var(--darkColor-blue);
 }
 
 .aiToolsCont .toolsCont .tIcon {
-    width: 26px;
-    height: 26px;
-    /* background-color: turquoise; */
-    margin-right: 12px;
+	width: 26px;
+	height: 26px;
+	/* background-color: turquoise; */
+	margin-right: 12px;
 }
 
-
 /* -----------End of Ai-Tools---------- */
-
 
 /* -------media query ------------------- */
 
 @media screen and (max-width: 1400px) {
-    .leftDiv {
-        transform: translateX(-50px);
-    }
+	.leftDiv {
+		transform: translateX(-50px);
+	}
 
-    .rightDiv {
-        transform: translateX(50px);
-    }
+	.rightDiv {
+		transform: translateX(50px);
+	}
 }
 
 @media screen and (max-width: 1200px) {
-    body {
-        display: block;
-    }
+	body {
+		display: block;
+	}
 
-    .centerDiv {
-        /* display: grid; */
-        grid-template-columns: auto;
-        /* width: fit-content; */
-        /* height: 500px; */
-        /* background-color: orange; */
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: var(--gap) auto auto;
-    }
+	.shortcutsContainer {
+		margin-top: 210px;
+	}
 
-    .leftDiv {
-        transform: translateX(0px);
-        /* background-color: green; */
-        margin-bottom: var(--gap);
-    }
+	.centerDiv {
+		/* display: grid; */
+		grid-template-columns: auto;
+		/* width: fit-content; */
+		/* height: 500px; */
+		/* background-color: orange; */
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: var(--gap) auto auto;
+	}
 
-    .rightDiv {
-        /* position: relative;
+	.leftDiv {
+		transform: translateX(0px);
+		/* background-color: green; */
+		margin-bottom: var(--gap);
+	}
+
+	.rightDiv {
+		/* position: relative;
         width: 640px; */
-        transform: translateX(0px);
-        /* background-color: rgba(0, 0, 255, 0.159); */
-    }
+		transform: translateX(0px);
+		/* background-color: rgba(0, 0, 255, 0.159); */
+	}
 
-    .ttteexxtt {
-        /* background-color: yellow; */
-        height: fit-content;
-        width: fit-content;
-        bottom: 0;
-        top: 0;
-        left: 300px;
-        /*Because Clock width is 300px*/
-        margin: auto auto auto var(--gap);
-
-    }
+	.ttteexxtt {
+		/* background-color: yellow; */
+		height: fit-content;
+		width: fit-content;
+		bottom: 0;
+		top: 0;
+		left: 300px;
+		/*Because Clock width is 300px*/
+		margin: auto auto auto var(--gap);
+	}
 }
 
 /* ---------------Menu-bar-css---------------- */
 .menuBar {
-    background-color: #0000004f;
-    backdrop-filter: blur(15px) saturate(170%);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    opacity: 0;
-    /*we are increasing opacity in js file*/
-    transition: all 0.5s;
-    overflow: hidden;
+	background-color: #0000004f;
+	backdrop-filter: blur(15px) saturate(160%);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	opacity: 0;
+	/*we are increasing opacity in js file*/
+	transition: all 0.5s;
+	overflow: hidden;
 }
 
 .menuBar .menuCont {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 400px;
-    transition: all 0.5s;
-    transform: translateX(100%);
-    background-color: var(--accentLightTint-blue);
-    border-bottom-left-radius: var(--round);
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 400px;
+	/* change on some languages for fix the buttons */
+	transition: all 0.5s;
+	transform: translateX(100%);
+	background-color: var(--accentLightTint-blue);
+	border-bottom-left-radius: var(--round);
 }
 
 .menuBar .menuCont .topRounder {
-    width: var(--round);
-    /*30px*/
-    height: var(--round);
-    /* background-color: #17a638; */
-    position: absolute;
-    left: -30px;
-    /* transform: translateX(-100%); */
+	width: var(--round);
+	/*30px*/
+	height: var(--round);
+	/* background-color: #17a638; */
+	position: absolute;
+	left: -30px;
+	/* transform: translateX(-100%); */
 }
 
 .menuCont .topDiv {
-    width: 100%;
-    height: 100px;
-    /*🚦🛺 🚜*/
-    background-color: var(--bg-color-blue);
-    position: relative;
+	width: 100%;
+	height: 100px;
+	/*🚦🛺 🚜*/
+	background-color: var(--bg-color-blue);
+	position: relative;
 }
 
 .menuCont .topDiv::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: var(--gap);
-    background-color: var(--accentLightTint-blue);
-    border-top-left-radius: var(--round);
-    border-top-right-radius: var(--round);
-    bottom: 0;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: var(--gap);
+	background-color: var(--accentLightTint-blue);
+	border-top-left-radius: var(--round);
+	border-top-right-radius: var(--round);
+	bottom: 0;
 }
 
 .menuCont .topDiv h1 {
-    font-size: 1.6rem;
-    /* background-color: yellow; */
-    width: fit-content;
-    height: fit-content;
-    color: var(--textColorDark-blue);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    transform: translateY(-50%);
+	font-size: 1.6rem;
+	/* background-color: yellow; */
+	width: fit-content;
+	height: fit-content;
+	color: var(--textColorDark-blue);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: translateY(-39%);
 }
 
 .menuCont .optCont {
-    width: 100%;
-    height: calc(100% - 140px);
-    /*for this 👁️ look above at🚦🛺 🚜*/
-    /* background-color: oldlace; */
-    transition: all 0.6s;
-    transform: translateX(100%);
-    opacity: 0;
-    overflow-y: auto; /* Allow vertical scrolling only */
-    overflow-x: hidden; /* Hide horizontal overflow */
+	width: 100%;
+	height: calc(100% - 140px);
+	/*for this 👁️ look above at🚦🛺 🚜*/
+	/* background-color: oldlace; */
+	transition: all 0.6s;
+	transform: translateX(100%);
+	opacity: 0;
+	overflow-y: scroll;
+	/* Allow vertical scrolling only */
+	overflow-x: hidden;
+	/* Hide horizontal overflow */
 }
 
 .menuCont .optCont .page {
-    width: 100%;
-    padding: 0 var(--gap) var(--gap) var(--gap);
-    position: absolute;
-    transition: all 0.6s;
+	width: 100%;
+	padding: 0 var(--gap) var(--gap) var(--gap);
+	position: absolute;
+	transition: all 0.6s;
 }
 
 /* -----------Scrollbar for menu---------------- */
 /* For WebKit browsers (Chrome, Safari) */
 .menuCont .optCont::-webkit-scrollbar {
-    width: 2px;
-    /* Width of the scrollbar */
+	width: 6px;
+	/* Width of the scrollbar */
 }
 
 /* Track */
 .menuCont .optCont::-webkit-scrollbar-track {
-    background: transparent;
-    /* Background of the track */
+	background: transparent;
+	/* Background of the track */
 }
 
 /* Handle */
 .menuCont .optCont::-webkit-scrollbar-thumb {
-    background: var(--darkColor-blue);
-    /* Color of the scrollbar handle */
-    border-radius: 2px;
-    /* Rounded corners for the scrollbar handle */
+	background: var(--darkColor-blue);
+	/* Color of the scrollbar handle */
+	border-radius: 3px;
+	/* Rounded corners for the scrollbar handle */
+}
+
+.menuCont .optCont::-webkit-scrollbar-thumb:hover {
+	background: var(--darkerColor-blue);
+	border-radius: 3px;
 }
 
 /* For Firefox */
-.menuCont .optCont {
-    scrollbar-width: thin;
-    /* Makes the scrollbar thin */
-    scrollbar-color: var(--darkColor-blue) transparent;
-    /* Handle color and track color */
+@-moz-document url-prefix() {
+	.menuCont .optCont {
+		scrollbar-width: thin;
+		scrollbar-color: var(--darkColor-blue) transparent;
+		/* Handle color and track color */
+	}
 }
 
 /* -------------End of Scrollbar for menu-------------- */
 
-
 .menuBar .optCont .tilesCont {
-    width: 100%;
-    /* height: 50px; */
-    /* background-color: #17a638; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--gap);
+	width: 100%;
+	height: 50px;
+	/* background-color: #17a638; */
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--gap);
 }
 
 .tilesCont .tiles {
-    background-color: var(--darkColor-blue);
-    border-radius: 20px;
-    font-size: 1rem;
-    color: var(--accentLightTint-blue);
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+	background-color: var(--darkColor-blue);
+	border-radius: 20px;
+	font-size: 1rem;
+	color: var(--accentLightTint-blue);
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.tilesCont .tiles:hover {
+	background-color: var(--darkerColor-blue);
 }
 
 .tilesCont .tiles .icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 13px;
-    margin-right: 13px;
+	width: 24px;
+	height: 24px;
+	margin-left: 13px;
+	margin-right: 13px;
 }
 
 .divider {
-    height: 6px;
-    width: 100px;
-    background-color: #fff;
-    border-radius: 3px;
-    margin: 20px auto;
+	height: 6px;
+	width: 100px;
+	background-color: #fff;
+	border-radius: 3px;
+	margin: 20px auto;
 }
 
 /* --- 🔴⚪🟡style for toggle buttons---- */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+	position: relative;
+	display: inline-block;
+	min-width: 60px;
+	height: 34px;
+	margin-left: 8px;
 }
 
 /* Hide the default checkbox input */
 .switch input {
-    display: none;
+	display: none;
 }
 
 /* Styling for the slider */
 .toggle {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--bg-color-blue);
-    /* Background color when off */
-    transition: 0.4s;
-    border-radius: 34px;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--bg-color-blue);
+	/* Background color when off */
+	transition: 0.4s;
+	border-radius: 34px;
 }
 
 /* Styling for the slider when it's in the "on" position */
 .toggle:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: var(--accentLightTint-blue);
-    /* Slider color when on */
-    transition: 0.4s;
-    border-radius: 50%;
-
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--accentLightTint-blue);
+	/* Slider color when on */
+	transition: 0.4s;
+	border-radius: 50%;
 }
 
 #shortcutEditButton {
-    fill: var(--textColorDark-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 34px;
-    cursor: pointer;
-    transition: 0.3s all;
-    margin: 0 auto;
-    background: none;
-    height: 100%;
-    width: 100%;
+	fill: var(--darkerColor-blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 34px;
+	cursor: pointer;
+	transition: 0.3s all;
+	margin: 0 auto;
+	background: none;
+	height: 100%;
+	width: 100%;
 }
 
 .toggleTextsCont .ttcont.inactive {
-    opacity: 0.5;
-    pointer-events: none;
+	opacity: 0.5;
+	pointer-events: none;
 }
 
 /* Apply styles when the input is checked (on) */
 input:checked + .toggle {
-    background-color: var(--darkColor-blue);
-    /* Background color when on */
+	background-color: var(--darkColor-blue);
+	/* Background color when on */
 }
 
 input:checked + .toggle:before {
-    transform: translateX(26px);
+	transform: translateX(26px);
 }
-
+md-outlined-text-field#userproxy {
+    width: -webkit-fill-available;
+	background-color: var(--acentLightTint-blue);
+	font-family: var(--main-font-family);
+	color: var(--textColorDark-blue);
+}
+md-outlined-text-field#userLoc {
+    width: -webkit-fill-available;
+	background-color: var(--acentLightTint-blue);
+	font-family: var(--main-font-family);
+	color: var(--textColorDark-blue);
+}
+md-outlined-text-field#userAPI {
+	width: -webkit-fill-available;
+	background-color: var(--acentLightTint-blue);
+	font-family: var(--main-font-family);
+	color: var(--textColorDark-blue);
+}
 /* --- END OF 🔴⚪🟡style for toggle buttons---- */
 
 .toggleTextsCont .ttcont {
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .unflex {
-    display: block !important;
+	display: block !important;
 }
 
 .ttcont input {
-    width: 100%;
-    margin-top: 6px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    padding: 0 11px;
+	width: 100%;
+	margin-top: 6px;
+	height: 30px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	padding: 0 11px;
 }
 
 .ttcont .texts .bigText {
-    font-size: 1.2rem;
-    color: var(--textColorDark-blue);
+	font-size: 1.2rem;
+	color: var(--textColorDark-blue);
 }
 
 .ttcont .texts .infoText {
-    font-size: 0.9rem;
-    color: var(--textColorDark-blue);
-    opacity: 0.86;
-    margin-top: -3px;
+	font-size: 0.9rem;
+	color: var(--textColorDark-blue);
+	opacity: 0.86;
+	margin-top: -3px;
 }
 
 .bottom {
-    /* background-color: #17a638; */
-    display: flex;
-    justify-content: space-between;
-    margin-top: 12px;
+	/* background-color: #17a638; */
+	display: flex;
+	justify-content: space-between;
+	margin-top: 12px;
 }
 
 .bottom a {
-    text-decoration: none;
-    color: var(--darkColor-blue);
-    font-size: 1rem;
+	text-decoration: none;
+	color: var(--darkColor-blue);
+	font-size: 1rem;
+	transition: color 0.3s ease;
+}
+
+.bottom a:hover {
+	color: var(--darkerColor-blue);
 }
 
 .bottom button {
-    border: none;
-    color: #fff;
-    background-color: var(--darkColor-blue);
-    padding: 6px 20px;
-    font-size: 1rem;
-    border-radius: 100px;
-    cursor: pointer;
+	border: none;
+	color: #fff;
+	background-color: var(--darkColor-blue);
+	padding: 6px 20px;
+	font-size: 1rem;
+	border-radius: 100px;
+	cursor: pointer;
 }
+
 .resetbtn {
-    width: -webkit-fill-available;
-    border: none;
-    color: #fff;
-    background-color: var(--darkColor-blue);
-    padding: 6px 20px;
-    font-size: 1rem;
-    border-radius: 100px;
-    cursor: pointer;
+	width: -webkit-fill-available;
+	width: -moz-available;
+	border: none;
+	color: #fff;
+	background-color: var(--darkColor-blue);
+	padding: 6px 20px;
+	font-size: 1rem;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
+
+.resetbtn:hover {
+	background-color: var(--darkerColor-blue);
+}
+
+.resetbtn:active {
+	background-color: var(--bg-color-blue);
+	color: var(--darkerColor-blue);
+}
+
 .topBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: var(--accentLightTint-blue);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: var(--accentLightTint-blue);
 }
 
 #backButton {
-    fill: var(--textColorDark-blue);
-    border: none;
-    background: none;
-    cursor: pointer;
+	fill: var(--textColorDark-blue);
+	border: none;
+	background: none;
+	cursor: pointer;
 }
 
 .rightButtons {
-    display: flex;
-    gap: 24px;
+	display: flex;
+	gap: 24px;
+}
+
+#newShortcutButton svg {
+	transition: transform 0.3s ease;
+}
+
+#newShortcutButton:active svg {
+	transform: scale(1.2);
+}
+
+.rotateResetButton {
+	transform: rotate(-360deg);
+	transition: transform 0.3s ease;
 }
 
 #resetButton,
 #newShortcutButton {
-    fill: var(--textColorDark-blue);
-    border: none;
-    background: none;
-    cursor: pointer;
+	fill: var(--textColorDark-blue);
+	border: none;
+	background: none;
+	cursor: pointer;
 }
 
 #newShortcutButton.inactive {
-    opacity: 0.5;
-    pointer-events: none;
+	opacity: 0.5;
+	pointer-events: none;
 }
 
 .pageTitle {
-    margin: var(--gap) 0;
-    width: 100%;
-    font-size: 1.8rem;
-    color: var(--textColorDark-blue);
+	margin-top: 10px;
+	width: 100%;
+	font-size: 1.6rem;
+	color: var(--textColorDark-blue);
+}
+
+#editShortcutsListInfo {
+	font-size: 0.8rem;
+	margin-top: 5px;
+	margin-bottom: var(--gap);
+	text-align: justify;
 }
 
 .shortcutSettingsEntry {
-    width: 100%;
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+	width: 100%;
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .shortcutSettingsEntry input {
-    width: calc(100% - var(--gap));
-    background: none;
-    border: none;
+	width: calc(100% - var(--gap));
+	background: none;
+	border: none;
 }
 
 .shortcutSettingsEntry .shortcutName {
-    font-size: 1.2rem;
-    color: var(--textColorDark-blue);
-    text-overflow: ellipsis;
+	font-size: 1.2rem;
+	color: var(--textColorDark-blue);
+	text-overflow: ellipsis;
 }
 
 .shortcutSettingsEntry .URL {
-    font-size: 0.9rem;
-    color: var(--textColorDark-blue);
-    opacity: 0.86;
-    margin-top: -3px;
-    text-overflow: ellipsis;
+	font-size: 0.9rem;
+	color: var(--textColorDark-blue);
+	opacity: 0.86;
+	margin-top: -3px;
+	text-overflow: ellipsis;
 }
 
 .delete button {
-    fill: var(--textColorDark-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 34px;
-    background: var(--bg-color-blue);
-    border: none;
-    border-radius: 34px;
-    cursor: pointer;
-    transition: 0.3s all;
+	fill: var(--textColorDark-blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 34px;
+	background: var(--bg-color-blue);
+	border: none;
+	border-radius: 34px;
+	cursor: pointer;
+	transition: 0.3s all;
 }
 
 .delete button:hover {
-    fill: white;
-    background: var(--darkColor-blue);
+	fill: white;
+	background: var(--darkColor-blue);
 }
 
 .delete button.inactive {
-    opacity: 0.5;
-    pointer-events: none;
+	opacity: 0.5;
+	pointer-events: none;
 }
 
 .addShortcutContainer button {
-    fill: white;
-    background: var(--darkColor-blue);
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 34px;
-    border: none;
-    border-radius: 34px;
-    cursor: pointer;
-    transition: 0.3s all;
+	fill: white;
+	background: var(--darkColor-blue);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 34px;
+	border: none;
+	border-radius: 34px;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+/* Placeholder InputText color*/
+#userproxy {
+	color: var(--textColorDark-blue);
+	background-color: var(--whitishColor-blue);
+}
+
+#userLoc {
+	color: var(--textColorDark-blue);
+	background-color: var(--whitishColor-blue);
+}
+
+#userAPI {
+	color: var(--textColorDark-blue);
+	background-color: var(--whitishColor-blue);
 }
 
 /* ---------------Menu-bar-css---------------- */
 
 /* --------------Theming stuff------------------ */
-.themingStuff, .languageSection {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    /* align-items: center; */
-    justify-content: space-between;
-    gap: var(--gap);
-    /* background-color: yellow; */
+.themingStuff{
+	margin-top: 11px;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	gap: var(--gap);
 }
-.userTextt{
-    display: none;
+
+.languageSection {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	gap: var(--gap);
+	margin-top: 30px;
 }
+
 .languageSelector {
-    background-color: #ffffffe8;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    /* width: 80%; */
-    width: 240px;
-    border: 2px solid transparent; /* adding transparent border on focus it will be turned to theme color*/
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    /* 5 divs in the first row */
-    grid-auto-rows: auto;
-    grid-gap: 10px;
-    padding: 12px;
-    color: var(--textColorDark-blue);
-    /* padding-right: 0px; */
-    border-radius: 26px;
-    appearance: none; /* Remove default browser styles */
-        -webkit-appearance: none; /* For Safari */
-        -moz-appearance: none; /* For Firefox */
-    cursor: pointer;
-    padding-left: 13px;
+	background-color: var(--whitishColor-blue);
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	/* width: 80%; */
+	width: 240px;
+	border: 2px solid transparent;
+	/* adding transparent border on focus it will be turned to theme color*/
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	/* 5 divs in the first row */
+	grid-auto-rows: auto;
+	grid-gap: 10px;
+	padding: 12px;
+	color: var(--textColorDark-blue);
+	/* padding-right: 0px; */
+	border-radius: 26px;
+	appearance: none;
+	/* Remove default browser styles */
+	-webkit-appearance: none;
+	/* For Safari */
+	-moz-appearance: none;
+	/* For Firefox */
+	cursor: pointer;
+	padding-left: 13px;
+
+	@-moz-document url-prefix() {
+		/* Scrollbar styles for Firefox */
+		scrollbar-width: thin;
+		scrollbar-color: var(--darkColor-blue) transparent;
+	}
+}
+
+/* Scrollbar styles for Chrome, Edge, Safari */
+.languageSelector::-webkit-scrollbar {
+	width: 6px;
+}
+
+.languageSelector::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.languageSelector::-webkit-scrollbar-thumb {
+	background-color: var(--bg-color-blue);
+	border-radius: 3px;
 }
 
 .languageSelector:focus {
-    border: 2px solid var(--darkColor-blue); /* color matching border on focus */
-    outline: none; /* Removes the default outline */
+	border: 2px solid var(--darkColor-blue);
+	/* color matching border on focus */
+	outline: none;
+	/* Removes the default outline */
 }
 
 .colorsContainer {
-    background-color: #ffffffe8;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    width: fit-content;
+	background-color: var(--whitishColor-blue);
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	width: -webkit-fill-available;
 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    /* 5 divs in the first row */
-    grid-auto-rows: auto;
-    grid-gap: 10px;
-    padding: 10px;
-    /* padding-right: 0px; */
-    border-radius: 26px;
-
-
+	display: initial;
+	grid-template-columns: repeat(5, 1fr);
+	/* 5 divs in the first row */
+	grid-auto-rows: auto;
+	grid-gap: 10px;
+	padding: 10px;
+	/* padding-right: 0px; */
+	border-radius: 26px;
 }
 
 .colorsContainer input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #fff;
-    height: 36px;
-    width: 36px;
-    border-radius: 18px;
-    outline: none;
-    /* margin-right: 10px; */
-    cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: #fff;
+	height: 36px;
+	width: 36px;
+	border-radius: 18px;
+	outline: none;
+	/* margin-right: 10px; */
+	cursor: pointer;
 }
 
 .colorsContainer input[value="blue"] {
-    background-color: #4382EC;
+	background-color: #4382ec;
 }
 
 .colorsContainer input[value="yellow"] {
-    background-color: #f3f05a;
+	background-color: #ffcc00;
 }
 
 .colorsContainer input[value="red"] {
-    background-color: #f91d1d;
+	background-color: #ec4343;
 }
 
 .colorsContainer input[value="green"] {
-    background-color: #17a638;
+	background-color: #5cba5c;
 }
 
 .colorsContainer input[value="cyan"] {
-    background-color: #2acdf5;
+	background-color: #00ced1;
 }
 
 .colorsContainer input[value="orange"] {
-    background-color: orange;
+	background-color: #ec844d;
 }
 
 .colorsContainer input[value="purple"] {
-    background-color: #b830de;
+	background-color: #9563b5;
 }
 
 .colorsContainer input[value="pink"] {
-    background-color: #e41b9e;
+	background-color: #ec5e78;
+}
+
+.colorsContainer input[value="brown"] {
+	background-color: #705347;
+}
+
+.colorsContainer input[value="silver"] {
+	background-color: #9e9e9e;
+}
+
+.colorsContainer input[value="grey"] {
+	background: linear-gradient(45deg,#bb4dee, #f8b880);
 }
 
 .colorsContainer input[value="dark"] {
-    background-color: #282828;
+	background-color: #171717;
 }
 
 .colorsContainer input[type="radio"]:checked::after {
-    position: absolute;
-    content: "";
-    width: 36px;
-    height: 36px;
-    background: url("./tick.svg") center center no-repeat;
-    background-size: 74%;
+	position: absolute;
+	content: "";
+	width: 36px;
+	height: 36px;
+	background: url("./svgs/tick.svg") center center no-repeat;
+	background-size: 74%;
 }
 
 .themingStuff .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9098039216);
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    right: 0;
-    border-radius: 100%;
-    z-index: 2;
-    cursor: pointer;
+	background-color: var(--whitishColor-blue);
+	height: 100%;
+	aspect-ratio: 1/1;
+	right: 0;
+	border-radius: 100%;
+	z-index: 2;
 }
-
 
 .languageIcon {
-    background-color: #ffffffe8;
+	background-color: var(--whitishColor-blue);
+	height: 100%;
+	aspect-ratio: 1/1;
+	right: 0;
+	border-radius: 100%;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4.5px;
+}
+
+/* Upload/Clear Buttons */
+.uploadClearContainer {
+	//display: flex;
+	margin-top: 124px;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+/* --------- Styling for Upload/Random/Clear Buttons --------- */
+.uploadButton {
+	width: 245px;
+}
+
+
+/* File input remains hidden */
+#imageUpload {
+	display: none;
+}
+
+/* --------- Style for Backup and Restore buttons --------- */
+.backupRestoreContainer {
+	width: 100%;
+	height: 38px;
+	margin-top: 33px;
+	margin-left: -10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+.backupRestoreBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 9px;
+	font-size: 0.9rem;
+	cursor: pointer;
+	border: none;
+	background-color: var(--bg-color-blue);
+	color: var(--darkerColor-blue);
+	border-radius: 20px;
+	transition: background-color 0.3s ease;
+}
+
+.backupRestoreBtn:hover {
+	background-color: var(--darkColor-blue);
+	color: #fffffff5;
+}
+
+.backupRestoreBtn:active {
+	background-color: var(--darkerColor-blue);
+	color: #fffffff5;
+}
+
+.spacer {
+	height: 23px;
+	/* Adjust this value to create space */
+}
+
+/* #darkTheme {
+	grid-column: span 2;
+	width: 82px;
+} */
+
+/* <!-- ----Color Picker || ColorPicker---- --> */
+#colorPicker{
+	display: none;
+}
+.colorPickerLabel{
+	grid-column: span 3;
+    width: 100%;
+    background: var(--accentLightTint-blue);
     height: 100%;
-    aspect-ratio: 1/1;
-    right: 0;
-    border-radius: 100%;
-    z-index: 2;
-    cursor: pointer;
+    border-radius: 100px;
     display: flex;
+    text-align: center;
     justify-content: center;
-    align-items: center;
+    font-size: 0.8rem;
+    line-height: 35px;
+	cursor: pointer;
+	border: 2px solid transparent;
+	transition: background-color 0.3s ease;
 }
-
-#darkTheme {
-    grid-column: span 2;
-    width: 82px;
+.colorPickerLabel:hover{
+    background: var(--bg-color-blue);
 }
+/* <!-- ----End of Color Picker || ColorPicker---- --> */
 
-/* -----------end of theming stuff---------------- */
+/* -----------End of theming stuff---------------- */
 
 #menuButton {
     position: fixed;
@@ -1559,11 +2853,9 @@ input:checked + .toggle:before {
 }
 
 
-
 /* ---------------------- */
 #menuCloseButton {
     position: absolute; /* Change to absolute positioning */
-    bottom: 0; /* Aligns to the top */
     left: 0; /* Aligns to the left */
     width: 42px;
     height: 42px;
@@ -1580,7 +2872,8 @@ input:checked + .toggle:before {
     overflow: hidden;
     transition: all 0.4s;
     cursor: pointer;
-    margin-left: 20px; /* Remove margin */
+    margin-left: 20px; 
+	margin-top: -20px;
 }
 
 
@@ -1649,4 +2942,96 @@ input:checked + .toggle:before {
 
 #menuCloseButton:hover .icon{
     transform: translateX(0) rotate(90deg);
+}
+
+
+/* --------- Search engines Dropdown css --------- */
+.dropdown-item {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.dropdown-btn {
+	background: none;
+	border: none;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	background: var(--accentLightTint-blue);
+	border-radius: 16px;
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	top: 50px;
+	left: -15px;
+	overflow: hidden;
+	max-height: 192px;
+}
+
+.dropdown-content .dropdown-item {
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+#default-dropdown-item .engine-name {
+	display: none;
+}
+
+.dropdown-content .engine-name {
+	font-size: 1rem;
+}
+
+.dropdown-item {
+	position: relative;
+}
+
+.dropdown-item.selected:not(*[data-default]):before {
+	/* border-radius: 16px; */
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	background-color: var(--bg-color-blue);
+	opacity: 0.8;
+	z-index: -1;
+}
+
+#default-dropdown-item {
+	outline: none !important;
+}
+
+*[id$="-dropdown"]:not(.dropdown-content .dropdown-item:nth-child(1)) {
+	bottom: 3px;
+}
+
+.search-dropdown .dropdown-item svg {
+	width: 33px;
+	height: 33px;
+	margin-left: 0;
+	padding: 2px;
+	background-color: var(--darkColor-blue);
+	border-radius: 100%;
+}
+
+
+/* ---------------------- Loading Screen --------------------------- */
+#LoadingScreen {
+	background: var(--Loading-Screen-Color);
+	display: flex;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99999;
 }

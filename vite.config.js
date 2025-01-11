@@ -3,6 +3,7 @@ import path from 'path';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
+  root: path.resolve(__dirname, 'src'), // Set the root directory to src
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -19,26 +20,38 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'src/manifest.json',  // Path to manifest.json in src
-          dest: '.'                   // Copy to the root of dist/
-        },
-        {
-          src: 'src/background.js',  
+          src: 'root/*', 
           dest: '.'                   
         },
         {
-          src: 'src/languages.js',  
-          dest: './src/'                   
+          src: 'svgs/*',  
+          dest: 'svgs'               
         },
         {
-          src: 'src/icon.png',        // Path to icon.png in src
-          dest: '.'                   // Copy to the root of dist/
+          src: 'favicon/*',
+          dest: 'favicon'
+        },
+        {
+          src: 'scripts/*',
+          dest: 'scripts'
+        },
+        {
+          src: 'docs/*',  
+          dest: 'docs'               
+        },
+        {
+          src: 'locales/*',  
+          dest: 'locales'               
+        },
+        {
+          src: 'tools/*', 
+          dest: 'tools'               
         }
       ]
     })
   ],
   build: {
-    outDir: 'dist',                // Ensure output is in dist folder
+    outDir: path.resolve(__dirname, 'dist'), // Ensure output is in dist folder
     rollupOptions: {
       output: {
         entryFileNames: 'app.js',    // Set the main JS file name

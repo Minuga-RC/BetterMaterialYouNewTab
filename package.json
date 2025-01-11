@@ -1,9 +1,9 @@
 {
-  "name": "MYNT",
-  "version": "3.1.5",
+  "name": "better-material-you-newtab",
+  "version": "4.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "vite --host",
+    "build": "rimraf dist && vite build"
   },
   "dependencies": {
     "@material/web": "^2.2.0",
